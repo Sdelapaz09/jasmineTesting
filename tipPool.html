@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title> Tip Pool </title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.css"/>
+  </head>
+  <body>
+    <h1> Tip Pool </h1>
+    
+    <section>
+      <aside>
+        <h4>Input payment info</h4>
+        <form id = "paymentForm">
+          <label for = "billAmnt"> Bill Amount </label>
+          <input type = "number" id = "billAmnt" autofocus />
+          
+          <label for = "tipAmnt"> Tip Amount </label>
+          <input type = "number" id = "tipAmnt" />
+          
+          <button> submit </button>
+        </form>
+        
+        <table id = "paymentTable">
+          <thead>
+            <tr>
+              <th> Bill Amnt </th>
+              <th> Tip Amnt </th>
+              <th> Tip Percent </th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <aside>
+          <h4> Input Server Info </h4>
+          <form id = "serverForm">
+            <label for = "serverName"> Server Name </label>
+            <input id = "serverName" />
+            <button> submit </button>
+          </form>
+          
+          <table id = "serverTable">
+            <thead>
+              <tr>
+                <th> Server Name </th>
+                <th> Earnings </th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </aside>
+       </section>
+      
+      <section id = "summary">
+        <h3> Shift Summary </h3>
+        <table id = "summaryTable">
+          <thead>
+            <tr>
+              <th> Bill Total </th>
+              <th> Tip Total </th>
+              <th> Tip Percent Avg </th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <script src = "https://unpkg.com/jasmin-core/lib/jasmine-core/jasmine.js"></script>
+      <script src = "https://unpkg.com/jasmin-core/lib/jasmine-core/jasmine-html.js"></script>
+      <script src = "https://unpkg.com/jasmin-core/lib/jasmine-core/boot.js"></script>
+      <script src = "payments.test.js"></script>
+      <script src = "servers.test.js"></script>
+      <script src = "helpers.test.js"></script>
+      
+      <script src = "payments.js"></script>
+      <script src = "servers.js"></script>
+      <script src = "helpers.js"></script>
+      </body>
+    </html>
